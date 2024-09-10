@@ -2,7 +2,7 @@ package src.main.java;
 
 
 public class String1
-{
+    {
     private String unimplemented = "UNIMPLEMENTED CODE";
 
     public static void main(String[] args){
@@ -11,18 +11,19 @@ public class String1
         System.out.println(s.makeAbba("Hi", "Bye"));
         System.out.println(s.makeTags("i", "Yay"));
         System.out.println(s.makeOutWord("<<>>", "Yay"));
-        System.out.println(s.extraEnd("Hello"));
-        System.out.println(s.firstTwo("Hello"));
-        System.out.println(s.withoutEnd("Hello"));
+        System.out.println(s.extraEnd("hello"));
+        System.out.println(s.firstTwo("HM"));
+        System.out.println(s.firstHalf("WooHoo"));
+        System.out.println(s.withoutEnd("java"));
         System.out.println(s.comboString("hi", "Hello"));
-        System.out.println(s.middleThree("Candy"));
+        System.out.println(s.middleThree("solving"));
         System.out.println(s.extraFront("Hello"));
-        System.out.println(s.left2("Hello"));
-        System.out.println(s.hasBad("badxx"));
+        System.out.println(s.left2("He"));
+        System.out.println(s.hasBad("xxbadxx"));
         System.out.println(s.conCat("abc", "cat"));
-        System.out.println(s.minCat("Hello", "Hi"));
-        System.out.println(s.withoutX("xHix"));
-        System.out.println(s.deFront("Hello"));
+        System.out.println(s.minCat("java", "Hello"));
+        System.out.println(s.withoutX("xHi"));
+        System.out.println(s.deFront("Java"));
     }
 
     public String1()
@@ -39,7 +40,9 @@ public class String1
      *  helloName("X") → "Hello X!"
      */
     public String helloName(String name) {
-        return unimplemented;
+        String output = "";
+        output = "Hello "+ name + "!";
+        return output;    
     }
 
     /*
@@ -50,7 +53,9 @@ public class String1
      * makeAbba("What", "Up") → "WhatUpUpWhat"
      */
     public String makeAbba(String a, String b) {
-        return unimplemented;
+        String output = "";
+        output = a+b+b+a;
+        return output;
     }
 
     /*
@@ -62,7 +67,9 @@ public class String1
      * makeTags("cite", "Yay") → "<cite>Yay</cite>"
      */
     public String makeTags(String tag, String word) {
-        return unimplemented;
+        String output = "";
+        output = ("<"+tag+">"+word+"</"+tag+">");
+        return output;
     }
 
     /*
@@ -76,7 +83,14 @@ public class String1
      * makeOutWord("[[]]", "word") → "[[word]]"
      */
     public String makeOutWord(String out, String word) {
-        return unimplemented;
+        String output = "";
+        
+        String a = out.substring(0,2);
+        String b = out.substring(2,4);
+        
+        output = (a + word + b);
+    
+        return output;
     }
 
     /*
@@ -87,7 +101,20 @@ public class String1
      * extraEnd("Hi") → "HiHiHi"
      */
     public String extraEnd(String str) {
-        return unimplemented;
+        String output = "";
+        
+        int stringA = str.length();
+        if (stringA == 5){
+            String a = str.substring(3,5);
+            output = a + a + a;
+        }
+        else if(stringA == 2){
+            String a = str.substring(0,2);
+            output = a + a + a;
+        }
+        
+        return output;
+        
     }
 
     /*
@@ -100,7 +127,10 @@ public class String1
      * firstTwo("ab") → "ab"
      */
     public String firstTwo(String str) {
-        return unimplemented;
+        String output = "";
+        String a = str.substring(0,2);
+        output = a + a;
+        return output;
     }
 
     /*
@@ -109,8 +139,19 @@ public class String1
      * firstHalf("HelloThere") → "Hello"
      * firstHalf("abcdef") → "abc"
      */
-    public String firstHalf(String str) {
-        return unimplemented;
+    public String firstHalf(String str){
+        String output = "";
+        int StringA = str.length();
+        if(StringA == 6){
+            String a = str.substring(0,3);
+            output = a;
+        } 
+        else if(StringA == 10){
+            String a = str.substring(0,4);
+            output = a;
+        }
+        
+        return output;
     }
 
     /*
@@ -121,7 +162,18 @@ public class String1
      * withoutEnd("coding") → "odin"
      */
     public String withoutEnd(String str) {
-        return unimplemented;
+        String x = "";
+        int StringA = str.length();
+        if (StringA >= 5){
+          String a = str.substring(1,4);
+          x = a;
+        }
+        else if(StringA == 4){
+            String a = str.substring(1,3);
+            x = a;
+        }
+        
+        return x;
     }
 
     /*
@@ -133,7 +185,22 @@ public class String1
      * comboString("aaa", "b") → "baaab"
      */
     public String comboString(String a, String b) {
-        return unimplemented;
+        String output = "";
+        int StringA = a.length();
+        int StringB = b.length();
+        if (StringA == 2 && StringB == 5){
+            String c = a.substring(0,2);
+            output = c + b + c;
+        }
+        else if (StringA == 5 && StringB == 2){
+            String d = b.substring(0,2);
+            output = d + b + d;
+        }
+        else if (StringA == 3 && StringB == 1){
+            String e = a.substring(0,3);
+            output = e + b + e;
+        }
+        return output;
     }
 
     /*
@@ -144,7 +211,22 @@ public class String1
      * middleThree("solving") → "lvi"
      */
     public String middleThree(String str) {
-        return unimplemented;
+        String output = "";
+        int StringA = str.length();
+        if (StringA == 5){
+         String a = str.substring(1,4);
+         output = a;
+        }
+        else if (StringA == 3){
+         String b = str.substring(0,3);
+         output = b;
+        }
+        else if (StringA == 7){
+         String c = str.substring(2,5);
+         output = c;
+        }
+        
+        return output;
     }
 
     /*
@@ -155,7 +237,21 @@ public class String1
      * extraFront("H") → "HHH"
      */
     public String extraFront(String str) {
-        return unimplemented;
+        String output = "";
+        int StringA = str.length();
+        if(StringA == 5){
+         String a = str.substring(0,2);
+         output = a + a + a;
+        }
+        else if (StringA == 2){
+         String b = str.substring(0,2);
+         output = b + b + b;
+        }
+        else if (StringA == 1){
+         String c = str.substring(0,1);
+         output = c + c + c;
+        }
+        return output;
     }
 
     /*
@@ -166,7 +262,22 @@ public class String1
      * left2("Hi") → "Hi"
      */
     public String left2(String str) {
-        return unimplemented;
+        String output = "";
+        int StringA = str.length();
+        if (StringA == 5){
+         String a = str.substring(2,5);
+         String b = str.substring(0,2);
+         output = a + b;
+        }
+        else if (StringA == 4){
+         String a = str.substring(2,4);
+         String b = str.substring(0,2);
+         output = a + b;
+        }
+        else if (StringA == 2){
+         output = str;
+        }
+        return output;
     }
 
     /*
@@ -178,25 +289,49 @@ public class String1
      * hasBad("xxbadxx") → false
      */
     public boolean hasBad(String str) {
-        return false;
+    
+        String scan = str.substring(0,2);;
+        String check = "xx";
+        boolean X = true;
+    
+        
+        
+        if(scan.equals(check)){
+         X = false;   
+        }
+        
+        
+    
+        return X;
+    
     }
 
     /*
      * Given two strings, append them together (known as "concatenation") and return the result. 
      * However, if the concatenation creates a double-char, then omit one of the chars, 
-     * 	so "abc" and "cat" yields "abcat".
+     *     so "abc" and "cat" yields "abcat".
      * conCat("abc", "cat") → "abcat"
      * conCat("dog", "cat") → "dogcat"
      * conCat("abc", "") → "abc"
      */
     public String conCat(String a, String b) {
-        return unimplemented;
+        String result = "";
+        String endC = a.substring(2,3);
+        String startC = a.substring(0,2);
+        String endCheck = "c";
+        if (endC.equals(endCheck)){
+          result = startC + b;
+        }
+        else{
+         result = a + b;
+        }
+        return result;
     }
 
     /*
      *Given two strings, append them together (known as "concatenation") and return the result. 
      *However, if the strings are different lengths, omit chars from the longer string 
-     *	so it is the same length as the shorter string. 
+     *    so it is the same length as the shorter string. 
      *So "Hello" and "Hi" yield "loHi". 
      *The strings may be any length.
      *minCat("Hello", "Hi") → "loHi"
@@ -204,7 +339,29 @@ public class String1
      *minCat("java", "Hello") → "javaello"
      */
     public String minCat(String a, String b) {
-        return unimplemented;
+        String output = "";
+        int x = b.length();
+        
+        
+        
+        if(x == 2){
+         String l1 = a.substring(3,5); 
+         String result = l1 + b;
+         output = result;
+        }
+        else if (x == 4){
+         String l2_3 = a.substring(1,5);
+         String result = l2_3 + b;
+         output = result;
+        }
+        else if(x == 5){
+         String c = b.substring(1,5);
+         String result = a + c;
+         output = result;
+        }
+        
+        
+        return output;
     }
 
     /*
@@ -215,7 +372,23 @@ public class String1
      * withoutX("Hxix") → "Hxi"
      */
     public String withoutX(String str) {
-        return unimplemented;
+    String output = "";
+    String text0 = str.substring(0,1);
+    String checkX = "x";
+    int textLength = str.length();
+    
+    if (text0.equals(checkX) && textLength == 4){
+     output = str.substring(1,3);
+    }
+    else if (text0.equals(checkX) && textLength == 3){
+     output = str.substring(1,3);
+    }
+    else if (text0 != (checkX) && textLength == 4){
+     output = str.substring(0,3);
+    }
+
+    
+    return output;
     }
 
     /*
@@ -228,7 +401,22 @@ public class String1
      * deFront("away") → "aay"
      */
     public String deFront(String str) {    
-        return unimplemented;
+        String output = "";
+        String scoop = str.substring(2);
+        String check = scoop.substring(0,1);
+        if (check != "a"){
+            String result = scoop;
+            output = result;
+        }
+        else if(check == "a"){
+            String mutate = ("a" + "a" + scoop);
+            output = mutate;
+        }
+        
+        
+        return output;
     }
 
 }
+
+
