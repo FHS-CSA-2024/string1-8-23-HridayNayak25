@@ -129,6 +129,7 @@ public class String1
     public String firstTwo(String str) {
         String output = "";
         String a = str.substring(0,2);
+        //It doesnt need to repeat, output should just be a
         output = a + a;
         return output;
     }
@@ -142,6 +143,7 @@ public class String1
     public String firstHalf(String str){
         String output = "";
         int StringA = str.length();
+       //You could use StringA as a variable in your substring since you can just divide the len by 2
         if(StringA == 6){
             String a = str.substring(0,3);
             output = a;
@@ -164,6 +166,7 @@ public class String1
     public String withoutEnd(String str) {
         String x = "";
         int StringA = str.length();
+        //You can use the length to help with these substrings too
         if (StringA >= 5){
           String a = str.substring(1,4);
           x = a;
@@ -188,6 +191,7 @@ public class String1
         String output = "";
         int StringA = a.length();
         int StringB = b.length();
+        //Compare the legnths and then combine them
         if (StringA == 2 && StringB == 5){
             String c = a.substring(0,2);
             output = c + b + c;
@@ -315,6 +319,7 @@ public class String1
      * conCat("abc", "") → "abc"
      */
     public String conCat(String a, String b) {
+        //Check to see if b is empty
         String result = "";
         String endC = a.substring(2,3);
         String startC = a.substring(0,2);
@@ -401,6 +406,7 @@ public class String1
      * deFront("away") → "aay"
      */
     public String deFront(String str) {    
+        //This also needs to check for b
         String output = "";
         String scoop = str.substring(2);
         String check = scoop.substring(0,1);
